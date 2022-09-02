@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nombre de usuario</th>
+            <th>Fecha de nacimiento</th>
+            <th>Edad</th>
+            <th>Dirección</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of usuarios">
+            <td>{{ item.name }}</td>
+            <td>{{ item.fecha_nacimiento }}</td>
+            <td>{{ item.edad }}</td>
+            <td>
+                {{ item.userdomicilio.domicilio }} {{ item.userdomicilio.numero_exterior }} {{ item.userdomicilio.colonia }}
+                {{ item.userdomicilio.cp }} {{ item.userdomicilio.ciudad }}
+            </td>
+
+        </tr>
+
+        
+    </tbody>
+</table>
